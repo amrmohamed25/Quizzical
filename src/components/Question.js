@@ -29,7 +29,7 @@ export default function Question(props){
     :props.answer[0].data===x?"#D6DBF5":"white",color:props.state===2?
     x===props.correct_answer?"white":props.answer[0].data===x?
     props.correct_answer===x?"white":"white":"black"
-:props.answer[0].data===x?"#D6DBF5":"white"}} onClick={props.state===1?()=>props.update(props.id,x):()=>{}}>{x}</button>)
+:props.answer[0].data===x?"black":"black"}} onClick={props.state===1?()=>props.update(props.id,x):()=>{}}>{x}</button>)
     // console.log(availableAnswers)
     return (
         <div className="question-div">
