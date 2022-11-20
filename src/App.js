@@ -6,14 +6,20 @@ function App() {
   const [quizState, setQuizState] = React.useState(0)
   const [newGame,setGame] = React.useState(0)
   function startQuiz(myState) {
-    
-    setQuizState(myState)
     if(myState===2){
       checkAnswers()
     }
-    if(myState===1){
-      setGame(x=>!x)
-    }
+    setQuizState((x)=>{
+      
+      if(x==0){
+
+      }
+      else if(x==2){
+        setGame(x=>!x)
+      }
+      return myState
+    })
+    
   }
   const [questions, setQuestions] = React.useState([])
   const [answers, setAnswers] = React.useState([])
